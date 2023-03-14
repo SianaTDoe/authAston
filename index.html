@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Authentification</h1>
+      <form method="POST" id="loginForm">
+        <label>Email</label>
+        <input
+          type="text"
+          placeholder="Enter your email"
+          name="email"
+          required
+        />
+
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="Enter your ultra secured password"
+          name="password"
+          required
+        />
+
+        <input type="submit" id="validation" value="Login" />
+      </form>
+    </div>
+
+    <span class="line"></span>
+
+    <div class="container">
+      <h1>Inscription</h1>
+      <form id="registrationForm">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" name="name" required />
+
+        <label>Mail</label>
+        <input
+          type="text"
+          placeholder="Enter your mail"
+          name="email"
+          required
+        />
+
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="Enter your ultra secured password"
+          name="password"
+          required
+        />
+
+        <label>Password Verification</label>
+        <input
+          type="password"
+          placeholder="Enter your ultra secured password"
+          name="passwordVerification"
+          required
+        />
+
+        <input type="submit" id="validation" value="Register" />
+      </form>
+    </div>
+  </body>
+
+  <style>
+    body {
+      font-family: cursive;
+      color: #3636d3;
+    }
+
+    .container {
+    }
+
+    .container h1 {
+      font-size: 2rem;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .container form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container form label {
+      font-size: 1.5rem;
+    }
+
+    .container form input {
+      border: 1px solid #3636d3;
+      width: 75%;
+      height: 3rem;
+      margin: 10px auto 20px;
+      border-radius: 7px;
+    }
+
+    .container #validation {
+      font-size: 1.5rem;
+      border: 1px solid #3636d3;
+      background: none;
+      color: #3636d3;
+      width: 50%;
+    }
+
+    .line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #3636d3;
+    }
+
+    @media screen and (min-width: 500px) {
+      .container form input {
+        width: 30%;
+      }
+
+      .container #validation {
+        width: 20%;
+      }
+    }
+  </style>
+
+  <script>
+    const loginFormElt = document.getElementById("loginForm");
+
+    const registrationFormElt = document.getElementById("registrationForm");
+    registrationFormElt.addEventListener("submit", (e) =>
+      handleRegistrationSubmit(e)
+    );
+
+    function handleRegistrationSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      console.log(form.);
+    }
+  </script>
+</html>
